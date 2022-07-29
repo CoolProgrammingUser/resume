@@ -6,9 +6,19 @@
 		</title>
 		<base target="_blank">
 		<script src="https://epicenterprograms.github.io/standards/behavior/general.js"></script>
-		<link rel="stylesheet" href="https://epicenterprograms.github.io/standards/formatting/foundation.css">
 		<!--
 		<script src="file:///C:/Users/rtben/Documents/GitHub/standards/behavior/general.js"></script>
+		-->
+		<script>
+			var S = Standards.general;
+
+			window.addEventListener("load", function () {
+				// sets my current age without requiring me to update it
+                S.getId("age").textContent = Math.floor((new Date().getTime()-new Date("March 11, 1998 4:00 GMT-0600").getTime())/(365.25*86400000));
+            });
+		</script>
+		<link rel="stylesheet" href="https://epicenterprograms.github.io/standards/formatting/foundation.css">
+		<!--
 		<link rel="stylesheet" href="file:///C:/Users/rtben/Documents/GitHub/standards/formatting/foundation.css">
 		-->
 		<style>
@@ -49,17 +59,17 @@
 		</h1>
 		<main>
 			<section>
-				It's my hope that this website will provide potential employers with a better insight into my personality and abilities. The categories below expand when they're clicked on. For those of you looking for information on my programming ability, it's worth noting that this website was made by me from scratch.
+				It's my hope that this website will provide potential employers or customers with a better insight into my personality and abilities. The categories below expand when they're clicked on. For those of you looking for information on my programming ability, it's worth noting that this website was made by me from scratch.
 			</section>
 			<div class="details">
 				<div class="summary">
 					Profile
 				</div>
-				<img src="Profile picture.jpg" id="profilePicture">
+				<img src="Profile picture.jpg" id="profilePicture" loading="lazy">
 				<table class="labeled-list">
 					<tr>
 						<th>Age:</th>
-						<td>23</td>
+						<td><span id="age"></span> (always up-to-date)</td>
 					</tr>
 					<tr>
 						<th>Education:</th>
@@ -69,10 +79,12 @@
 						<th>Specialization:</th>
 						<td>Microbiology, Cellular and Molecular Biology, and Biotechnology</td>
 					</tr>
+					<!--
 					<tr>
 						<th>Ideal job qualities:</th>
 						<td>Remote, part-time, biology-related</td>
 					</tr>
+					-->
 					<tr>
 						<th>Strengths:</th>
 						<td>Attention to detail, organization, patience, taking initiative</td>
@@ -87,7 +99,7 @@
 				<div class="summary">
 					Biology experience
 				</div>
-				<img src="Biology Club cover photo.jpg" id="biologyClubPhoto">
+				<img src="Biology Club cover photo.jpg" id="biologyClubPhoto" loading="lazy">
 				<br>
 				<div class="column-container">
 					<ul class="left-column">
@@ -142,7 +154,7 @@
 				<h3>
 					Walmart personal shopper
 				</h3>
-				<img src="My impact on Walmart.jpg" id="walmartImpact">
+				<img src="My impact on Walmart.jpg" id="walmartImpact" loading="lazy">
 				<table class="labeled-list">
 					<tr>
 						<th>Description:</th>
@@ -188,6 +200,27 @@
 								<li>Revealed bacteria and mold on fingers and surfaces</li>
 							</ul>
 						</td>
+					</tr>
+				</table>
+				<h3>
+					Multiple freelance jobs
+				</h3>
+				<table class="labeled-list">
+					<tr>
+						<th>Description:</th>
+						<td>Did delivery driving and odd jobs through DoorDash, Instacart, and PeopleReady</td>
+					</tr>
+					<tr>
+						<th>Time worked:</th>
+						<td>January 2022 &ndash; now</td>
+					</tr>
+					<tr>
+						<th>Hours:</th>
+						<td>Part-time</td>
+					</tr>
+					<tr>
+						<th>Contributions:</th>
+						<td>Minimal</td>
 					</tr>
 				</table>
 			</div>
@@ -240,7 +273,7 @@
 				<table class="labeled-list">
 					<tr>
 						<th>Description:</th>
-						<td>A website I made to help me and others memorize information. Offers access to information from any device for people who make an account, and currently supports classic flashcards as well as adaptive flashcards which respond to your demonstrated knowledge of the subject. (8/29/2021)</td>
+						<td>A website I made to help me and others memorize information. Offers access to information from any device for people who make an account, and currently supports classic flashcards as well as adaptive flashcards which respond to your demonstrated knowledge of the subject. (7/28/2022)</td>
 					</tr>
 					<tr>
 						<th>Link:</th>
@@ -256,7 +289,7 @@
 					<ul class="left-column">
 						<li>Restarting and running a college biology club</li>
 						<li>Intermittently running a very small business (<a href="https://sites.google.com/site/beginningofabusiness/home">website</a>)</li>
-						<li>Contributing to Wikipedia</li>
+						<li>Contributing to Wikipedia (<a href="https://en.wikipedia.org/wiki/User:Frivolous_Consultant">user page</a>)</li>
 					</ul>
 					<ul class="right-column">
 						<li>Formal writing</li>
@@ -269,7 +302,10 @@
 				<div class="summary">
 					Contact information
 				</div>
-				<table class="labeled-list">
+				<section id="contactNotice">
+					This information is hidden to prevent people from contacting me without my permission.
+				</section>
+				<table class="labeled-list" id="contactInformation">
 					<tr>
 						<th>Email:</th>
 						<td>rtbenson42<wbr>@gmail<wbr>.com</td>
@@ -291,10 +327,19 @@
 						<td>Available upon request</td>
 					</tr>
 				</table>
+				<script style="display:none">
+					// only shows my contact information if the link is properly formatted
+					if (window.location.href.includes("?") && window.location.href.includes("showc=true")) {
+						S.getId("contactNotice").style.display = "none";
+                    } else {
+						S.getId("contactInformation").style.display = "none";
+						/// hiding in CSS and showing with JavaScript messes up the hiding and showing of the section
+                    }
+				</script>
 			</div>
 		</main>
 		<footer>
-			Last updated August 29, 2021
+			Last updated July 28, 2022
 		</footer>
 	</body>
 </html>
