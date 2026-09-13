@@ -14,8 +14,8 @@
 
 			window.addEventListener("load", function () {
 				// sets my current age without requiring me to update it
-                S.getId("age").textContent = Math.floor((new Date().getTime()-new Date("March 11, 1998 4:00 GMT-0600").getTime())/(365.25*86400000));
-            });
+				S.getId("age").textContent = Math.floor((new Date().getTime()-new Date("March 11, 1998 4:00 GMT-0600").getTime())/(365.25*86400000));
+			});
 		</script>
 		<link rel="stylesheet" href="https://epicenterprograms.github.io/standards/formatting/foundation.css">
 		<!--
@@ -45,21 +45,40 @@
 				width: 10em;
 				max-width: 100%;
 			}
-			#dangelosImpact, #homeInsteadImpact {
+			#dangelosImpact, #homeInsteadImpact, #doordashImpact {
 				position: relative;
 				float: right;
 				width: 15em;
 				max-width: 100%;
 			}
 
-            @media (max-width: 1000px) {
-                #walmartImpact {
-                    float: none;
-                }
-				#dangelosImpact, #homeInsteadImpact {
+			#timeline {
+				background: none;
+			}
+			#timeline th {
+				border: none;
+				text-align: right;
+				text-align-last: right;
+				background: none;
+			}
+			#timeline td {
+				border-width: 0em;
+				text-align: left;
+				text-align-last: left;
+				background: none;
+			}
+			#timeline td:nth-child(2) {
+				border-left-width: .2em;
+			}
+
+			@media (max-width: 1000px) {
+				#walmartImpact {
 					float: none;
 				}
-            }
+				#dangelosImpact, #homeInsteadImpact, #doordashImpact {
+					float: none;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -68,7 +87,7 @@
 		</h1>
 		<main>
 			<section>
-				It's my hope that this website will provide potential employers or customers with a better insight into my personality and abilities. The categories below expand when they're clicked on. For those of you looking for information on my programming ability, it's worth noting that this website was made by me from scratch.
+				It's my hope that this website will provide potential employers or clients with a better insight into my personality and abilities. The categories below expand when they're clicked on. For those of you looking for information on my programming ability, it's worth noting that this website was made by me from scratch.
 			</section>
 			<div class="details">
 				<div class="summary">
@@ -118,9 +137,10 @@
 						<li>Blue/white screening</li>
 						<li>Analysis of electrophoresis bands</li>
 						<li>Primer design</li>
+						<li>Plasmid design</li>
 						<li>Gram staining</li>
-						<li>Effects of UV light on bacteria</li>
 						<li>DNA extraction</li>
+						<li>Codon optimization (& making a program for it)</li>
 					</ul>
 					<ul class="right-column">
 						<li>Experimental design</li>
@@ -130,6 +150,7 @@
 						<li>Identification of cell types</li>
 						<li>ELISA</li>
 						<li>Agglutination blood testing</li>
+						<li>Effects of UV light on bacteria</li>
 						<li>Direct blood cell count</li>
 						<li>Ouchterlony double immunodiffusion</li>
 					</ul>
@@ -315,6 +336,28 @@
 						</td>
 					</tr>
 				</table>
+				<h3>
+					More DoorDash
+				</h3>
+				<img src="3D printed DoorDash badge.jpg" id="doordashImpact" loading="lazy">
+				<table class="labeled-list">
+					<tr>
+						<th>Description:</th>
+						<td>Delivered food and groceries to people using DoorDash</td>
+					</tr>
+					<tr>
+						<th>Time worked:</th>
+						<td>January 2025 (intermittent) &ndash; May 3, 2026 (regular) &ndash; present</td>
+					</tr>
+					<tr>
+						<th>Hours:</th>
+						<td>Part-time</td>
+					</tr>
+					<tr>
+						<th>Contributions:</th>
+						<td>Minimal</td>
+					</tr>
+				</table>
 			</div>
 			<div class="details">
 				<div class="summary">
@@ -350,6 +393,7 @@
 						<td><a href="https://github.com/EpicenterPrograms/codonoptimizer">https://<wbr>github<wbr>.com/<wbr>EpicenterPrograms/<wbr>codonoptimizer</a></td>
 					</tr>
 				</table>
+				<!--
 				<h3>
 					Decoder
 				</h3>
@@ -365,6 +409,7 @@
 						<td><a href="https://coolprogramminguser.github.io/decoder/">https://<wbr>coolprogramminguser<wbr>.github<wbr>.io/<wbr>decoder/</a></td>
 					</tr>
 				</table>
+				-->
 				<h3>
 					Standards
 				</h3>
@@ -421,14 +466,83 @@
 						<li>Intermittently running a very small business (<a href="https://sites.google.com/site/beginningofabusiness/home">website</a>)</li>
 						<li>Contributing to Wikipedia (<a href="https://en.wikipedia.org/wiki/User:Frivolous_Consultant">user page</a>)</li>
 						<li>Traveling the country while living out of my car</li>
+						<li>Finding and fixing up a run-down house</li>
+						<li>How To Grow (Almost) Anything course (<a href="https://colossal-can-f18.notion.site/6b20e179ee794960bd8acf98d683eb6c">student page</a>)</li>
 					</ul>
 					<ul class="right-column">
 						<li>Formal writing</li>
 						<li>Table and graph production and analysis</li>
 						<li>Image, audio, and video editing</li>
 						<li>3D modeling and 3D printing</li>
+						<li>Running a YouTube channel (<a href="https://www.youtube.com/channel/UCtb1sh67LrGizmL34RAdAcw">channel</a>)</li>
 					</ul>
 				</div>
+			</div>
+			<div class="details">
+				<div class="summary">
+					Timeline of major life chapters
+				</div>
+				<section>
+					Sometimes a cold listing of work experience doesn't adequately explain what's going on in a person's life, so I thought a timeline of the major influences on my life could help paint a fuller picture. The dates indicate when a chapter began, and the chapter generally continues until the start of the next one.
+				</section>
+				<br>
+				<table id="timeline">
+					<tr>
+						<th>1998</th>
+						<td>Childhood and school</td>
+					</tr>
+					<tr>
+						<th></th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="padding: 0em 1em 0em;">&emsp;~~~~</td>
+					</tr>
+					<tr>
+						<th></th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>2016</th>
+						<td>College</td>
+					</tr>
+					<tr>
+						<th></th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th></th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>2020</th>
+						<td>Staying with my girlfriend while she finished her bachelor's degree</td>
+					</tr>
+					<tr>
+						<th>2021</th>
+						<td>Traveling the country while living out of my car</td>
+					</tr>
+					<tr>
+						<th></th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>2023</th>
+						<td>Saving up to buy cheap property</td>
+					</tr>
+					<tr>
+						<th></th>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<th>2025</th>
+						<td>Searching for a place to live</td>
+					</tr>
+					<tr>
+						<th>2026</th>
+						<td>Trying to fix up the place I'm living in</td>
+					</tr>
+				</table>
 			</div>
 			<div class="details">
 				<div class="summary">
@@ -448,7 +562,7 @@
 					</tr>
 					<tr>
 						<th>Address:</th>
-						<td>3153 Patrick Lane<br>Pacific, Missouri 63069</td>
+						<td>4706 Wedgewood Drive<br>House Springs, Missouri 63051</td>
 					</tr>
 					<tr>
 						<th>LinkedIn:</th>
@@ -463,15 +577,15 @@
 					// only shows my contact information if the link is properly formatted
 					if (window.location.href.includes("?") && window.location.href.includes("showc=true")) {
 						S.getId("contactNotice").style.display = "none";
-                    } else {
+					} else {
 						S.getId("contactInformation").style.display = "none";
 						/// hiding in CSS and showing with JavaScript messes up the hiding and showing of the section
-                    }
+					}
 				</script>
 			</div>
 		</main>
 		<footer>
-			Last updated January 20, 2025
+			Last updated September 13, 2026
 		</footer>
 	</body>
 </html>
