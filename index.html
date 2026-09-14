@@ -22,6 +22,9 @@
 		<link rel="stylesheet" href="file:///C:/Users/rtben/Documents/GitHub/standards/formatting/foundation.css">
 		-->
 		<style>
+			li {
+				text-align: left;
+			}
 			.column-container {
 				
 			}
@@ -34,6 +37,9 @@
 			#profilePicture {
 				width: 10em;
 				max-width: 100%;
+			}
+			#profileTable td {
+				text-align: left;
 			}
 			#biologyClubPhoto {
 				width: 30em;
@@ -51,6 +57,9 @@
 				width: 15em;
 				max-width: 100%;
 			}
+			#contactNotice {
+				padding: 0em .5em;
+			}
 
 			#timeline {
 				background: none;
@@ -59,6 +68,7 @@
 				border: none;
 				text-align: right;
 				text-align-last: right;
+				vertical-align: top;
 				background: none;
 			}
 			#timeline td {
@@ -94,7 +104,7 @@
 					Profile
 				</div>
 				<img src="1-20-2023 profile picture.jpg" id="profilePicture" loading="lazy">
-				<table class="labeled-list">
+				<table class="labeled-list" id="profileTable">
 					<tr>
 						<th>Age:</th>
 						<td><span id="age"></span> (updates automatically)</td>
@@ -482,7 +492,7 @@
 				<div class="summary">
 					Timeline of major life chapters
 				</div>
-				<section>
+				<section style="padding: 0em .5em;">
 					Sometimes a cold listing of work experience doesn't adequately explain what's going on in a person's life, so I thought a timeline of the major influences on my life could help paint a fuller picture. The dates indicate when a chapter began, and the chapter generally continues until the start of the next one.
 				</section>
 				<br>
@@ -496,7 +506,7 @@
 						<td>&nbsp;</td>
 					</tr>
 					<tr>
-						<td colspan="2" style="padding: 0em 1em 0em;">&emsp;~~~~</td>
+						<td colspan="2" style="padding: 0em 1em;">&emsp;~~~~</td>
 					</tr>
 					<tr>
 						<th></th>
