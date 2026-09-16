@@ -15,6 +15,14 @@
 			window.addEventListener("load", function () {
 				// sets my current age without requiring me to update it
 				S.getId("age").textContent = Math.floor((new Date().getTime()-new Date("March 11, 1998 4:00 GMT-0600").getTime())/(365.25*86400000));
+
+                // sets my contact information
+				if (window.location.href.includes("?") && window.location.href.includes("showc=true")) {
+					S.getId("myEmail").innerHTML = "rtbenson42<wbr>@gmail<wbr>.com";
+					S.getId("myPhoneNumber").innerHTML = "314-625-8746";
+					S.getId("myAddress").innerHTML = "4706 Wedgewood Drive<br>House Springs, Missouri 63051";
+					S.getId("myLinkedIn").innerHTML = '<a href="https://www.linkedin.com/in/roberttourbenson/">https://<wbr>www<wbr>.linkedin<wbr>.com/<wbr>in/<wbr>roberttourbenson/</a>';
+				}
 			});
 		</script>
 		<link rel="stylesheet" href="https://epicenterprograms.github.io/standards/formatting/foundation.css">
@@ -34,6 +42,12 @@
 			.right-column {
 				float: right;
 			}
+			.horizontal-pic {
+				position: relative;
+				float: right;
+				width: 15em;
+				max-width: 100%;
+			}
 			#profilePicture {
 				width: 10em;
 				max-width: 100%;
@@ -49,12 +63,6 @@
 				position: relative;
 				float: right;
 				width: 10em;
-				max-width: 100%;
-			}
-			#dangelosImpact, #homeInsteadImpact, #doordashImpact {
-				position: relative;
-				float: right;
-				width: 15em;
 				max-width: 100%;
 			}
 			#contactNotice {
@@ -82,10 +90,10 @@
 			}
 
 			@media (max-width: 1000px) {
-				#walmartImpact {
+				.horizontal-pic {
 					float: none;
 				}
-				#dangelosImpact, #homeInsteadImpact, #doordashImpact {
+				#walmartImpact {
 					float: none;
 				}
 			}
@@ -171,16 +179,17 @@
 					Work experience
 				</div>
 				<h3>
-					Boston University data entry assistant
+					DoorDash
 				</h3>
+				<img src="3D printed DoorDash badge.jpg" class="horizontal-pic" loading="lazy">
 				<table class="labeled-list">
 					<tr>
 						<th>Description:</th>
-						<td>Entered prospective student information into the Boston University computer system</td>
+						<td>Delivered food and groceries to people using DoorDash</td>
 					</tr>
 					<tr>
 						<th>Time worked:</th>
-						<td>October 2016 &ndash; April 2017</td>
+						<td>January 2025 (intermittent) &ndash; May 3, 2026 (regular) &ndash; present</td>
 					</tr>
 					<tr>
 						<th>Hours:</th>
@@ -189,6 +198,111 @@
 					<tr>
 						<th>Contributions:</th>
 						<td>Minimal</td>
+					</tr>
+				</table>
+				<h3>
+					Home Instead caregiver
+				</h3>
+				<img src="All Home Instead badges.jpg" class="horizontal-pic" loading="lazy">
+				<table class="labeled-list">
+					<tr>
+						<th>Description:</th>
+						<td>Cared for elderly people who wanted to remain in their homes</td>
+					</tr>
+					<tr>
+						<th>Time worked:</th>
+						<td>April 30, 2024 &ndash; December 29, 2024</td>
+					</tr>
+					<tr>
+						<th>Hours:</th>
+						<td>Full-time, then part-time</td>
+					</tr>
+					<tr>
+						<th>Contributions:</th>
+						<td>
+							<ul>
+								<li>3D printed custom name badges for all of the employees</li>
+								<li>Provided calm emotional support during difficult times</li>
+								<li>
+									Solved many problems others couldn't solve
+									<ul>
+										<li>Inspired use of a superior walker</li>
+										<li>Created a swinging tray to hold things while going up a step</li>
+										<li>Restored internet and telephone service after a contractor couldn't</li>
+										<li>
+											Reenabled a speaker for playing music
+											<ul>
+												<li>Then wrote a guide for others to reference</li>
+											</ul>
+										</li>
+										<li>Altered a hose sprayer for easier use</li>
+										<li>Secured a steering wheel knob which had become loose</li>
+										<li>Got an actually funtioning watch (shhh, that's a secret)</li>
+										<li>
+											Addressed various issues only brought up with me
+											<ul>
+												<li>Chose me because they considered me the most resourceful</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+				<h3>
+					D'Angelo's Pizzeria delivery driver
+				</h3>
+				<img src="Decorated D'Angelos counter.jpg" class="horizontal-pic" loading="lazy">
+				<table class="labeled-list">
+					<tr>
+						<th>Description:</th>
+						<td>Delivered food, washed dishes, and occasionally helped in other areas</td>
+					</tr>
+					<tr>
+						<th>Time worked:</th>
+						<td>November 17, 2023 &ndash; February 17, 2024</td>
+					</tr>
+					<tr>
+						<th>Hours:</th>
+						<td>Full-time</td>
+					</tr>
+					<tr>
+						<th>Contributions:</th>
+						<td>
+							<ul>
+								<li>Designed a program to automatically schedule people's shifts</li>
+								<li>Provided countless marketing ideas</li>
+								<li>Made paper snowflakes and origami flowers for decoration</li>
+								<li>Included origami with my deliveries to improve the customer's experience</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+				<h3>
+					Multiple freelance jobs
+				</h3>
+				<img src="Pallet mountains.jpg" class="horizontal-pic" loading="lazy">
+				<table class="labeled-list">
+					<tr>
+						<th>Description:</th>
+						<td>Did delivery driving and odd jobs through DoorDash, Instacart, PeopleReady, and TaskRabbit</td>
+					</tr>
+					<tr>
+						<th>Time worked:</th>
+						<td>January 2022 &ndash; November 2023</td>
+					</tr>
+					<tr>
+						<th>Hours:</th>
+						<td>Part-time</td>
+					</tr>
+					<tr>
+						<th>Contributions:</th>
+						<td>Minimal</td>
+					</tr>
+					<tr>
+						<th>Note:</th>
+						<td>This time was primarily characterized by me traveling the country.</td>
 					</tr>
 				</table>
 				<h3>
@@ -243,121 +357,17 @@
 					</tr>
 				</table>
 				<h3>
-					Multiple freelance jobs
+					Boston University data entry assistant
 				</h3>
+				<img src="Short Boston University logo.png" class="horizontal-pic" loading="lazy" style="width:10em">
 				<table class="labeled-list">
 					<tr>
 						<th>Description:</th>
-						<td>Did delivery driving and odd jobs through DoorDash, Instacart, PeopleReady, and TaskRabbit</td>
+						<td>Entered prospective student information into the Boston University computer system</td>
 					</tr>
 					<tr>
 						<th>Time worked:</th>
-						<td>January 2022 &ndash; November 2023</td>
-					</tr>
-					<tr>
-						<th>Hours:</th>
-						<td>Part-time</td>
-					</tr>
-					<tr>
-						<th>Contributions:</th>
-						<td>Minimal</td>
-					</tr>
-					<tr>
-						<th>Note:</th>
-						<td>This time was primarily characterized by me traveling the country.</td>
-					</tr>
-				</table>
-				<h3>
-					D'Angelo's Pizzeria delivery driver
-				</h3>
-				<img src="Decorated D'Angelos counter.jpg" id="dangelosImpact" loading="lazy">
-				<table class="labeled-list">
-					<tr>
-						<th>Description:</th>
-						<td>Delivered food, washed dishes, and occasionally helped in other areas</td>
-					</tr>
-					<tr>
-						<th>Time worked:</th>
-						<td>November 17, 2023 &ndash; February 17, 2024</td>
-					</tr>
-					<tr>
-						<th>Hours:</th>
-						<td>Full-time</td>
-					</tr>
-					<tr>
-						<th>Contributions:</th>
-						<td>
-							<ul>
-								<li>Designed a program to automatically schedule people's shifts</li>
-								<li>Provided countless marketing ideas</li>
-								<li>Made paper snowflakes and origami flowers for decoration</li>
-								<li>Included origami with my deliveries to improve the customer's experience</li>
-							</ul>
-						</td>
-					</tr>
-				</table>
-				<h3>
-					Home Instead caregiver
-				</h3>
-				<img src="All Home Instead badges.jpg" id="homeInsteadImpact" loading="lazy">
-				<table class="labeled-list">
-					<tr>
-						<th>Description:</th>
-						<td>Cared for elderly people who wanted to remain in their homes</td>
-					</tr>
-					<tr>
-						<th>Time worked:</th>
-						<td>April 30, 2024 &ndash; December 29, 2024</td>
-					</tr>
-					<tr>
-						<th>Hours:</th>
-						<td>Full-time, then part-time</td>
-					</tr>
-					<tr>
-						<th>Contributions:</th>
-						<td>
-							<ul>
-								<li>3D printed custom name badges for all of the employees</li>
-								<li>Provided calm emotional support during difficult times</li>
-								<li>
-									Solved many problems others couldn't solve
-									<ul>
-										<li>Inspired use of a superior walker</li>
-										<li>Created a swinging tray to hold things while going up a step</li>
-										<li>Restored internet and telephone service after a contractor couldn't</li>
-										<li>
-											Reenabled a speaker for playing music
-											<ul>
-												<li>Then wrote a guide for others to reference</li>
-											</ul>
-										</li>
-										<li>Altered a hose sprayer for easier use</li>
-										<li>Secured a steering wheel knob which had become loose</li>
-										<li>Got an actually funtioning watch (shhh, that's a secret)</li>
-										<li>
-											Addressed various issues only brought up with me
-											<ul>
-												<li>Chose me because they considered me the most resourceful</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</td>
-					</tr>
-				</table>
-				<h3>
-					More DoorDash
-				</h3>
-				<img src="3D printed DoorDash badge.jpg" id="doordashImpact" loading="lazy">
-				<table class="labeled-list">
-					<tr>
-						<th>Description:</th>
-						<td>Delivered food and groceries to people using DoorDash</td>
-					</tr>
-					<tr>
-						<th>Time worked:</th>
-						<td>January 2025 (intermittent) &ndash; May 3, 2026 (regular) &ndash; present</td>
+						<td>October 2016 &ndash; April 2017</td>
 					</tr>
 					<tr>
 						<th>Hours:</th>
@@ -564,19 +574,19 @@
 				<table class="labeled-list" id="contactInformation">
 					<tr>
 						<th>Email:</th>
-						<td>rtbenson42<wbr>@gmail<wbr>.com</td>
+						<td id="myEmail"></td>
 					</tr>
 					<tr>
 						<th>Phone number:</th>
-						<td>314-625-8746</td>
+						<td id="myPhoneNumber"></td>
 					</tr>
 					<tr>
 						<th>Address:</th>
-						<td>4706 Wedgewood Drive<br>House Springs, Missouri 63051</td>
+						<td id="myAddress"></td>
 					</tr>
 					<tr>
 						<th>LinkedIn:</th>
-						<td><a href="https://www.linkedin.com/in/roberttourbenson/">https://<wbr>www<wbr>.linkedin<wbr>.com/<wbr>in/<wbr>roberttourbenson/</a></td>
+						<td id="myLinkedIn"></td>
 					</tr>
 					<tr>
 						<th>References:</th>
@@ -595,7 +605,7 @@
 			</div>
 		</main>
 		<footer>
-			Last updated September 13, 2026
+			Last updated September 15, 2026
 		</footer>
 	</body>
 </html>
